@@ -1,13 +1,14 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import * as MUI from '@mui/material'
 import * as MICON from '@mui/icons-material'
 import './main.scss'
 import { toggleCompleted, deleteTodo, editTodo } from '../../../Redux/TodoSlice'
-import { useDispatch, useSelector  } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { resetModel } from '../../../Redux/ModelSlice'
 import Model from './Model'
 
 function TodoUISection({todovalue, id, completed, toggleModel, settoggleModel, edited}) {
+
 
     const dispatch = useDispatch()
 
@@ -29,13 +30,14 @@ function TodoUISection({todovalue, id, completed, toggleModel, settoggleModel, e
         closeModel();
         dispatch(editTodo({
             id : id,
-            edited : !edited
+            edited : !edited,
         }))
     }
 
     const closeModel = () =>{
         settoggleModel(!toggleModel)
     }
+
 
 
   return (

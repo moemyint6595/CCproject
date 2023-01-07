@@ -18,6 +18,7 @@ function TodoMapSection({toggleModel, settoggleModel, closeModel}) {
                     toggleModel={toggleModel}
                     settoggleModel={settoggleModel}
                     edited={todo.edited}
+                    toggledit = {todo.toggledit}
                   />
              </div>
             )

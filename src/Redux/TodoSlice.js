@@ -11,7 +11,7 @@ const todoSlice = createSlice({
                 id : Math.floor((Math.random() * 10000 ) + 1 ),
                 todovalue : action.payload.todovalue,
                 completed : false,
-                edited : false
+                edited : false,
             }
             state.push(newTodo);
         },

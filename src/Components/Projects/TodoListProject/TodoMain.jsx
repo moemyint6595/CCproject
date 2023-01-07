@@ -7,7 +7,6 @@ import TodoMapSection from './TodoMapSection'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
-import Model from './Model'
 
 function TodoMain() {
     const length = useSelector((state)=>state.todos.filter((todo)=>todo.completed === false))
@@ -20,7 +19,7 @@ function TodoMain() {
 
   return (
       <>
-       <div className='back-wrapper'>
+            <div className='back-wrapper'>
         <Link className='back-home-link' to='/'>
             <FaTimes/>
         </Link>
